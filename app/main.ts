@@ -6,7 +6,7 @@ import { bootstrap }    from '@angular/platform-browser-dynamic';
 import { AppComponent } from './app.component';
 import { APP_ROUTER_PROVIDERS } from './app.routes';
 bootstrap(AppComponent);
-
+//Applying the route configuration when bootstrapping Angular2 app
 bootstrap(AppComponent, [
     APP_ROUTER_PROVIDERS
 ])
