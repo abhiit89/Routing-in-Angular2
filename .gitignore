@@ -16,4 +16,6 @@ npm-debug.log
 ###########################
 typings/
 app/*.js
+app/**.js
 app/*.js.map
+app/**.js.map

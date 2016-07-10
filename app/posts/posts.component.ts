@@ -13,4 +13,11 @@ import {Component} from '@angular/core';
 })
 
 export class PostsComponent {
+    constructor() {
+        this.log();
+    }
+
+    log() {
+        console.log(3333)
+    }
 }

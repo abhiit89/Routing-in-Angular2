@@ -9,14 +9,14 @@ import {UsersComponent} from './users/users.component';
 
 //RouterConfig is an array of routes
 export const routes: RouterConfig = [
-...PostsRoutes,
+    ...PostsRoutes,
     {
         path: '',
         redirectTo: '/posts',
         pathMatch: 'full'
     },
     { path: 'users', component: UsersComponent }
-];
+]
 
 //This exports not only includes application rules but also services such as Router
 //Router - Displays the application component for the active URL. Manages navigation from one component to the next.
