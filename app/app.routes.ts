@@ -2,13 +2,19 @@
  * Created by namita on 7/7/16.
  */
 
-import { provideRouter, RouterConfig } from '@angular/router';
-import {PostsComponent} from './posts.component';
-import {UsersComponent} from './users.component';
+import {provideRouter,RouterConfig } from '@angular/router';
+import {AppComponent} from './app.component';
+import {PostsRoutes} from './posts/posts.routes';
+import {UsersComponent} from './users/users.component';
 
 //RouterConfig is an array of routes
 export const routes: RouterConfig = [
-    { path: 'posts', component: PostsComponent },
+...PostsRoutes,
+    {
+        path: '',
+        redirectTo: '/posts',
+        pathMatch: 'full'
+    },
     { path: 'users', component: UsersComponent }
 ];
 
