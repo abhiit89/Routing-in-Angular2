@@ -3,8 +3,23 @@
  */
 
 import {RouterConfig } from '@angular/router';
-import {PostsComponent} from './posts.component';
+import {PostsComponent} from './posts.component'
+import {PostsListsComponent} from './posts-lists.component';
+import {PostsDetailComponent} from './posts-detail.component';
 
 export const PostsRoutes: RouterConfig = [
-    { path: 'posts', component: PostsComponent },
+    {
+        path: 'posts',
+        component: PostsComponent,
+        children : [
+            {
+                path:'',
+                component:PostsListsComponent
+            },
+            {
+                path:':id',
+                component: PostsDetailComponent
+            }
+        ]
+    }
 ];

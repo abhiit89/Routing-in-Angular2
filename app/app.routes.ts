@@ -9,12 +9,12 @@ import {UsersComponent} from './users/users.component';
 
 //RouterConfig is an array of routes
 export const routes: RouterConfig = [
-    ...PostsRoutes,
     {
         path: '',
         redirectTo: '/posts',
         pathMatch: 'full'
     },
+    ...PostsRoutes,
     { path: 'users', component: UsersComponent }
 ]
 

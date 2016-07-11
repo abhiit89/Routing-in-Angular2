@@ -1,35 +1,16 @@
 /**
- * Created by namita on 7/7/16.
+ * Created by namita on 7/11/16.
  */
 
-import {Component} from '@angular/core';
+import { Component }            from '@angular/core';
+import { ROUTER_DIRECTIVES }    from '@angular/router';
 import {PostsDataService} from '../posts-data.service';
-import {PostsData} from './posts-data';
-
 @Component({
-    template: `
-    <div>
-        <h2>Posts:</h2>
-        <ul *ngFor="let postData of postsData">
-        <li>Post Id: {{postData.id}}</li>
-        <li>Title: {{postData.title}}</li>
-        <li>Body: {{postData.body}}</li>
-
-        </ul>
-    </div>
-    `,
-    styles:['ul{list-style-type: none}'],
-    providers: [PostsDataService]
+    template:  `
+    <h2>View Posts</h2>
+    <router-outlet></router-outlet>
+  `,
+    directives: [ROUTER_DIRECTIVES],
+    providers:  [PostsDataService]
 })
-
-export class PostsComponent {
-    constructor(private _postsDataService: PostsDataService) {
-        this.log();
-    }
-
-    private postsData:PostsData[]=[];
-
-    log() {
-        this.postsData = this._postsDataService.getData();
-    }
-}
+export class PostsComponent { }
