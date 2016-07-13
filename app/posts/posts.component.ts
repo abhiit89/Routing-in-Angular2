@@ -4,7 +4,7 @@
 
 import { Component }            from '@angular/core';
 import { ROUTER_DIRECTIVES }    from '@angular/router';
-import {PostsDataService} from '../posts-data.service';
+import {PostsDataService} from './posts-data.service';
 @Component({
     template:  `
     <h2>View Posts</h2>

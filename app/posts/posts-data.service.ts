@@ -3,7 +3,7 @@
  */
 
 import {Injectable} from "@angular/core";
-import {PostsData} from './posts/posts-data';
+import {PostsData} from './posts-data';
 @Injectable()
 export class PostsDataService {
     private postsData:PostsData[] = [

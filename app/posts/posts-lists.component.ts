@@ -3,7 +3,7 @@
  */
 
 import {Component} from '@angular/core';
-import {PostsDataService} from '../posts-data.service';
+import {PostsDataService} from './posts-data.service';
 import {PostsData} from './posts-data';
 import {Router} from '@angular/router';
 
