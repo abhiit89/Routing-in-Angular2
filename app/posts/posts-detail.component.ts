@@ -25,6 +25,7 @@ export class PostsDetailComponent {
     constructor(private route:ActivatedRoute,
                 private router:Router) {
     }
+    private id:number;
     private sub: any;
     showId(){
         this.sub = this.route.params.subscribe(params=>{
