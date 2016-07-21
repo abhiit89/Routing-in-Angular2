@@ -23,7 +23,8 @@ import 'rxjs/add/observable/fromPromise';
 
 export class PostsDetailComponent {
     constructor(private route:ActivatedRoute,
-                private router:Router) {
+                private router:Router
+    ) {
     }
     private id:number;
     private sub: any;
@@ -32,5 +33,6 @@ export class PostsDetailComponent {
             this.id = +params['id'];
         })
     }
+
 }
 

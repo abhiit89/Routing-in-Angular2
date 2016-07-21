@@ -25,9 +25,13 @@ export class PostsListsComponent {
     }
 
     private postsData:PostsData[]=[];
+    private errorMessage:any='';
 
     log() {
-        this.postsData = this._postsDataService.getData();
+        this._postsDataService.getData()
+            .subscribe(
+                posts => this.postsData=posts,
+                error =>  this.errorMessage = <any>error);
     }
     onSelect(post:PostsData){
         this.router.navigate(['/posts',post.id]);
