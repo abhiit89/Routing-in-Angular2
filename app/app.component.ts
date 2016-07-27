@@ -10,12 +10,32 @@ import './rxjs-operators';
 @Component({
     selector: 'my-app',
     template: `
-      <h1>Component Router</h1>
-      <nav>
-        <a [routerLink]="['/posts']">Posts</a>
-        <a [routerLink]="['/users']">Users</a>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Routing in Angular 2</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" routerLink="/posts"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Posts</a>
+        <a class="mdl-navigation__link" routerLink="/users">Users</a>
       </nav>
-      <router-outlet></router-outlet>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Routing in Angular 2</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" routerLink="/posts">Posts</a>
+       <a class="mdl-navigation__link" routerLink="/users">Users</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><h1>Component Router</h1>
+      <router-outlet></router-outlet></div>
+  </main>
+</div>
     `,
     directives:[ROUTER_DIRECTIVES]
 
