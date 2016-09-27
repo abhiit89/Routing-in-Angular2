@@ -4,14 +4,13 @@
 
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {UsersComponent} from './users/users.component';
 const appRoutes: Routes = [
     {
         path: '',
         redirectTo: '/posts',
         pathMatch: 'full'
     },
-    { path: 'users', component: UsersComponent }
+    { path: 'users', loadChildren: 'app/users/users.module#UsersModule' }
 ];
 export const appRoutingProviders: any[] = [
 ];

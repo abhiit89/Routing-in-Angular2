@@ -9,7 +9,6 @@ import { AppComponent }         from './app.component';
 import { routing,
     appRoutingProviders }  from './app.routing';
 import {PostsModule} from './posts/posts.module';
-import {UsersComponent} from './users/users.component';
 
 @NgModule({
     imports: [
@@ -19,9 +18,7 @@ import {UsersComponent} from './users/users.component';
         PostsModule
     ],
     declarations: [
-        AppComponent,
-        UsersComponent
-
+        AppComponent
     ],
     providers: [
         appRoutingProviders
