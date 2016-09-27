@@ -4,7 +4,6 @@
 
 import {Component} from '@angular/core';
 // importing Angular Component Router. Not the part of Angular 2 core. In own library package @angular/router
-import { ROUTER_DIRECTIVES }  from '@angular/router';
 import './rxjs-operators';
 
 @Component({
@@ -36,8 +35,7 @@ import './rxjs-operators';
       <router-outlet></router-outlet></div>
   </main>
 </div>
-    `,
-    directives:[ROUTER_DIRECTIVES]
+    `
 
 })
 

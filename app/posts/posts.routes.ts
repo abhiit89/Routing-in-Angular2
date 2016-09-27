@@ -2,13 +2,14 @@
  * Created by namita on 7/10/16.
  */
 
-import {RouterConfig } from '@angular/router';
+import { ModuleWithProviders }  from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import {PostsComponent} from './posts.component'
 import {PostsListsComponent} from './posts-lists.component';
 import {PostsDetailComponent} from './posts-detail.component';
 //import {AuthGuard} from '../auth-guard.service';
 
-export const PostsRoutes: RouterConfig = [
+const PostsRoutes: Routes  = [
     {
         path: 'posts',
         component: PostsComponent,
@@ -27,3 +28,5 @@ export const PostsRoutes: RouterConfig = [
         ]
     }
 ];
+
+export const postsRouting: ModuleWithProviders = RouterModule.forChild(PostsRoutes);
