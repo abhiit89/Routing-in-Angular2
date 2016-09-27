@@ -6,7 +6,7 @@ import {RouterConfig } from '@angular/router';
 import {PostsComponent} from './posts.component'
 import {PostsListsComponent} from './posts-lists.component';
 import {PostsDetailComponent} from './posts-detail.component';
-import {AuthGuard} from '../auth-guard.service';
+//import {AuthGuard} from '../auth-guard.service';
 
 export const PostsRoutes: RouterConfig = [
     {
@@ -20,7 +20,9 @@ export const PostsRoutes: RouterConfig = [
             {
                 path:':id',
                 component: PostsDetailComponent,
+/*
                 canActivate: [AuthGuard]
+*/
             }
         ]
     }

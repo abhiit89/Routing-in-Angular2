@@ -19,3 +19,12 @@ app/*.js
 app/**.js
 app/*.js.map
 app/**.js.map
+app/posts/*.js
+app/posts/**.js
+app/posts/*.js.map
+app/posts/**.js.map
+app/users/*.js
+app/users/**.js
+app/users/*.js.map
+app/users/**.js.map
+
